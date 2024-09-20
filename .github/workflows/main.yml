@@ -60,4 +60,4 @@ jobs:
     - name: Deploy
       run: |-
         kubectl get pods
-    # kubectl apply -f deploy.yml #
+        kubectl apply -f https://raw.githubusercontent.com/Mystos16/GKE/refs/heads/extra/deployBlue.yaml
