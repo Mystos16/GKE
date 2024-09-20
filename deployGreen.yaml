@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gke-deployment
+  name: gke-deployment-green
   labels:
     app: gkeapp
     selectorlabel: green
