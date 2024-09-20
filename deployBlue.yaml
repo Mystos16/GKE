@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gke-deployment
+  labels:
+    app: gkeapp
+spec:
+  replicas: 1  # Number of replicas you want to run
+  selector:
+    matchLabels:
+      app: gkeapp
+  template:
+    metadata:
+      labels:
+        app: gkeapp
+    spec:
+      containers:
+      - name: gke-container
+        image: europe-west4-docker.pkg.dev/kubernetes-434509/blue-green/gkeimage:blue  # Replace <PROJECT_ID> with your actual project ID
+        ports:
+        - containerPort: 80  # Example container port, adjust as needed
